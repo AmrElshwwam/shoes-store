@@ -10,15 +10,15 @@ class CustomTitleTextFieldProfile extends StatelessWidget {
     required this.titleField,
     required this.hintField,
     required this.controller,
-    required this.readOnly,
-    required this.color,
+    // required this.readOnly,
+    // required this.color,
   });
 
   final String titleField;
   final String hintField;
   final TextEditingController controller;
-  final bool readOnly;
-  final Color color;
+  // final bool readOnly;
+  // final Color color;
 
   @override
   Widget build(BuildContext context) {
@@ -44,30 +44,30 @@ class CustomTitleTextFieldProfile extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 5),
               child: TextFormField(
                 controller: controller,
-                readOnly: readOnly,
+                // readOnly: readOnly,
                 style: TextStyle(color: AColors.black, fontSize: 18),
                 cursorColor: AColors.black,
                 decoration: InputDecoration(
-                  suffixIcon: Padding(
-                    padding:
-                        const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
-                    child: InkWell(
-                      onTap: () {
-                        profileCubit.openedField();
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(5),
-                        child: Text(
-                          "edit".tr(context),
-                          style: TextStyle(
-                            color: AColors.green,
-                            fontSize: 16,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
+                  // suffixIcon: Padding(
+                  //   padding:
+                  //       const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                  //   child: InkWell(
+                  //     onTap: () {
+                  //       profileCubit.openedField();
+                  //     },
+                  //     child: Padding(
+                  //       padding: const EdgeInsets.all(5),
+                  //       child: Text(
+                  //         "edit".tr(context),
+                  //         style: TextStyle(
+                  //           color: AColors.green,
+                  //           fontSize: 16,
+                  //           fontWeight: FontWeight.bold,
+                  //         ),
+                  //       ),
+                  //     ),
+                  //   ),
+                  // ),
 
                   //--
                   hintText: hintField,
@@ -98,8 +98,8 @@ class CustomTitleTextFieldProfile extends StatelessWidget {
                   focusedBorder: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(10),
                     borderSide: BorderSide(
-                      color: color,
-                      // width: 2,
+                      color: AColors.green,
+                      width: 2,
                     ),
                   ),
                 ),

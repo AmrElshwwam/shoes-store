@@ -170,6 +170,18 @@ class SignupScreen extends StatelessWidget {
                                         if (isValid) {
                                           formCubit.saveData();
 
+                                          ScaffoldMessenger.of(context)
+                                              .showSnackBar(
+                                            SnackBar(
+                                              content: Text(
+                                                "Account Created Successfully",
+                                                style: TextStyle(fontSize: 18),
+                                              ),
+                                              duration: Duration(seconds: 1),
+                                              backgroundColor: AColors.green,
+                                            ),
+                                          );
+
                                           Navigator.of(context).pushReplacement(
                                             MaterialPageRoute(
                                               builder: (context) =>

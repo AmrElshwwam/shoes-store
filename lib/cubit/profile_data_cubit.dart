@@ -5,7 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 part 'profile_data_state.dart';
 
 class ProfileDataCubit extends Cubit<ProfileDataState> {
-  bool openField = false;
+  // bool openField = false;
   String fullName = "";
   String email = "";
   String phone = "";
@@ -75,8 +75,8 @@ class ProfileDataCubit extends Cubit<ProfileDataState> {
     ));
   }
 
-  void openedField() {
-    openField = !openField;
-    emit(OpenFieldState(openField: openField));
-  }
+  // void openedField() {
+  //   openField = !openField;
+  //   emit(OpenFieldState(openField: openField));
+  // }
 }

@@ -111,48 +111,48 @@ class ProfileScreen extends StatelessWidget {
 
                           CustomTitleTextFieldProfile(
                             controller: profileCubit.fullNameController,
-                            readOnly: !isOpenField,
+                            // readOnly: !isOpenField,
                             titleField: "full_name".tr(context),
                             hintField: "Your Full Name",
-                            color: isOpenField
-                                ? AColors.green
-                                : AColors.grey.withValues(alpha: .3),
+                            // color: isOpenField
+                            //     ? AColors.green
+                            //     : AColors.grey.withValues(alpha: .3),
                           ),
 
                           //--
 
                           CustomTitleTextFieldProfile(
                             controller: profileCubit.emailController,
-                            readOnly: !isOpenField,
+                            // readOnly: !isOpenField,
                             titleField: "email".tr(context),
                             hintField: "Your Email",
-                            color: isOpenField
-                                ? AColors.green
-                                : AColors.grey.withValues(alpha: .3),
+                            // color: isOpenField
+                            //     ? AColors.green
+                            //     : AColors.grey.withValues(alpha: .3),
                           ),
 
                           //--
 
                           CustomTitleTextFieldProfile(
                             controller: profileCubit.phoneController,
-                            readOnly: !isOpenField,
+                            // readOnly: !isOpenField,
                             titleField: "phone".tr(context),
                             hintField: "Your Phone",
-                            color: isOpenField
-                                ? AColors.green
-                                : AColors.grey.withValues(alpha: .3),
+                            // color: isOpenField
+                            //     ? AColors.green
+                            //     : AColors.grey.withValues(alpha: .3),
                           ),
 
                           //--
 
                           CustomTitleTextFieldProfile(
                             controller: profileCubit.passwordController,
-                            readOnly: !isOpenField,
+                            // readOnly: !isOpenField,
                             titleField: "password".tr(context),
                             hintField: "Your Password",
-                            color: isOpenField
-                                ? AColors.green
-                                : AColors.grey.withValues(alpha: .3),
+                            // color: isOpenField
+                            //     ? AColors.green
+                            //     : AColors.grey.withValues(alpha: .3),
                           ),
                         ],
                       ),
@@ -183,7 +183,9 @@ class ProfileScreen extends StatelessWidget {
                           content: Text(
                             "profile_data_saved".tr(context),
                             style: TextStyle(
-                                fontSize: 18, fontWeight: FontWeight.w500),
+                              fontSize: 18,
+                              fontWeight: FontWeight.w500,
+                            ),
                           ),
                         ),
                       );

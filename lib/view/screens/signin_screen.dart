@@ -144,10 +144,9 @@ class SigninScreen extends StatelessWidget {
                                 sw: sw,
                                 textButton: "SIGN IN",
                                 onTap: () async {
-                                  final messenger = ScaffoldMessenger.of(
-                                      context); // حفظ `ScaffoldMessenger`
-                                  final navigator =
-                                      Navigator.of(context); // حفظ `Navigator`
+                                  final messenger =
+                                      ScaffoldMessenger.of(context);
+                                  final navigator = Navigator.of(context);
 
                                   String resultSignIn = await formCubit
                                       .signIn(); // استدعاء دالة تسجيل الدخول
@@ -160,8 +159,9 @@ class SigninScreen extends StatelessWidget {
                                         content: Text(
                                           resultSignIn,
                                           style: TextStyle(
-                                              fontSize: 18,
-                                              fontWeight: FontWeight.w500),
+                                            fontSize: 18,
+                                            fontWeight: FontWeight.w500,
+                                          ),
                                         ),
                                       ),
                                     ); // عرض رسالة الخطأ

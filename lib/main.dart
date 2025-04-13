@@ -7,6 +7,7 @@ import 'package:shoes_store/core/language/app_localizations.dart';
 import 'package:shoes_store/cubit/app_language_cubit.dart';
 import 'package:shoes_store/cubit/app_theme_cubit.dart';
 import 'package:shoes_store/view/screens/master_screen.dart';
+import 'package:shoes_store/view/screens/welcome_screen.dart';
 
 void main() {
   runApp(
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
             themeData = themeState.theme;
           }
 
-          return BlocBuilder<AppLanguageCubit,AppLanguageState>(
+          return BlocBuilder<AppLanguageCubit, AppLanguageState>(
             builder: (context, langState) {
               if (langState is ChangeLocalState) {
                 return MaterialApp(
@@ -55,10 +56,10 @@ class MyApp extends StatelessWidget {
                       orElse: () => supportedLocales.first,
                     );
                   },
-                  home: const MasterScreen(), // or WelcomeScreen(),
+                  home: WelcomeScreen(),
                 );
               }
-              return const CircularProgressIndicator(); // 👈 لو تبي تضيف لودينق هنا أحسن
+              return const CircularProgressIndicator();
             },
           );
         },

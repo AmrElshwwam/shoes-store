@@ -4,7 +4,6 @@ import 'package:shoes_store/core/constant/app_colors.dart';
 import 'package:shoes_store/core/language/app_localizations.dart';
 import 'package:shoes_store/cubit/add_cart_cubit.dart';
 
-
 class RowBottonAddBuy extends StatelessWidget {
   const RowBottonAddBuy({
     super.key,
@@ -45,20 +44,8 @@ class RowBottonAddBuy extends StatelessWidget {
                     backgroundColor: AColors.green,
                   ),
                 );
-
-                // Navigator.of(context).push(
-                //   MaterialPageRoute(
-                //     builder: (context) => BlocProvider.value(
-                //       value: context
-                //           .read<AddCardCubit>(), // تأكد من تمرير نفس الكيوبت
-                //       child: CartScreen(),
-                //     ),
-                //   ),
-                // );
               },
-              // color: AColors.white,
               height: 60,
-              // minWidth: double.infinity,
               child: Text(
                 "add_to_cart".tr(context),
                 style: TextStyle(
